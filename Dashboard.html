@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Dashboard</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffffff;
+    }
+
+    .navbar {
+      border-bottom: 2px solid #007bff;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .nav-link {
+      font-size: 18px;
+      color: #ffffff; /* Changing the color to white */
+    }
+
+    .nav-link:hover {
+      color: #ffffff; /* Changing the color to white on hover */
+    }
+
+    .card {
+      margin-bottom: 50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      height: auto;
+      margin-left: 10px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .card-text {
+      font-size: 16px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .table th,
+    .table td {
+      vertical-align: middle;
+    }
+
+    .small-img {
+      width: 200px;
+      height: auto;
+      padding-left: 20px;
+      padding-top: 12px;
+    }
+
+    .medical-history-table {
+      max-width: 100%;
+      font-size: 14px;
+    }
+
+    .card3 {
+      width: fit-content;
+      margin: 3px;
+    }
+
+    .col-md-4 {
+      -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+      max-width: 40%;
+    }
+
+    table {
+      width: 75%;
+      padding-left: 500px;
+    }
+
+    .rowend {
+      margin-left: 145px;
+      width: 1400px;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Patient Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Appointments </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Medical Records </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Prescription.html">Prescriptions</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-3">
+        <!-- Patient Information Card -->
+        <div class="card">
+          <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?cs=srgb&dl=pexels-justin-shaifer-501272-1222271.jpg&fm=jpg" class="card-img-top small-img" alt="Patient Image">
+          <div class="card-body">
+            <h5 class="card-title">Patient Information</h5>
+            <p class="card-text">Name: John Dube</p>
+            <p class="card-text">Age: 35</p>
+            <p class="card-text">Gender: Male</p>
+            <p class="card-text">Email: john.doe@example.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <!-- Latest Appointments -->
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Latest Appointments</h5>
+            <div class="appointment">
+              <div class="appointment-item">
+                <p>1] Dr. Sunil Sheety</p>
+                <p>Date: 2024-02-11</p>
+                <p>Time: 10:00 AM</p>
+                <p>Regular checkup</p>
+              </div>
+              <p>-------------------------------------------------------------------------</p>
+              <div class="appointment-item">
+                <p>2] Dr. Dipti Sheety</p>
+                <p>Date: 2024-02-15</p>
+                <p>Time: 11:30 AM</p>
+                <p>Stitches Checking</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vital Signs -->
+      <div class="card col-md-3">
+        <div class="card3">
+          <div class="card-body">
+            <h5 class="card-title">Blood Pressure</h5>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD-7qvqn9ulQkalkrgqLLPRWLGVo_RtHTQ1R6pL21D1w&s" class="card-img-top small-img" alt="Blood Pressure Image">
+            <p class="card-text">120/80 mmHg</p>
+          </div>
+        </div>
+      </div>
+      <div class="card col-md-3">
+        <div class="card3">
+          <div class="card-body">
+            <h5 class="card-title">Glucose Level</h5>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJuKf_NqZsRmgXucpgiaxfCaXu3AAguQ-1j0LKqqSUOw&s" class="card-img-top small-img" alt="Glucose Level Image">
+            
+            <p class="card-text"><br><br>100 mg/dL</p>
+          </div>
+        </div>
+      </div>
+      <div class="card col-md-3">
+        <div class="card3">
+          <div class="card-body">
+            <h5 class="card-title">Heart Rate</h5>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrj20pLZcS3BeWbAm1Lv3NlbY1ApTO5hGT08Hk0i5sYw&s" class="card-img-top small-img" alt="Heart Rate Image"><br>
+            <p class="card-text">75 bpm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Medical History -->
+  <div class="rowend">
+    <div class="col-md-9">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Medical History</h5>
+          <table class="table medical-history-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Condition</th>
+                <th>Doctor</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2024-02-10</td>
+                <td>Heart Attack</td>
+                <td>Dr. Smith</td>
+
+                <td><a href="Details.html" class="btn btn-primary btn-sm">View Details</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
